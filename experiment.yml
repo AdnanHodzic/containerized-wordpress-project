@@ -1,0 +1,12 @@
+---
+- hosts: aws-wp
+  remote_user: "{{ system_user }}"
+  become: yes
+
+  vars_files:
+    - defaults/main.yml
+
+  roles:
+  - AdnanHodzic.system-upgrade
+  - AdnanHodzic.docker-compose
+  - AdnanHodzic.wordpress-docker-deploy
