@@ -12,8 +12,8 @@
     - name: Install roles from requirements.yml to roles/
       local_action: command ansible-galaxy install -fr requirements.yml --roles-path roles
 
-    # ToDo: remove?
-    - lineinfile:
+    - name: add roles dir to .gitignore
+      lineinfile:
         dest: .gitignore
         regexp: '^\/roles$'
         line: '/roles'
@@ -38,6 +38,52 @@
   remote_user: "{{ system_user }}"
   become: yes
   serial: 3
+
+#  vars_prompt:
+#
+#    - name: domain
+#      prompt: "\n------
+#              \nSpecify blog URL"
+#      private: no
+#      default: "foolcontrol.org"
+#
+#    - name: wp_version
+#      prompt: "\n------
+#              \nSpecify WordPress version you'd like to use"
+#      private: no
+#      default: "4.7.1"
+#
+#    - name: mysql_root_psw
+#      prompt: "\n------
+#              \nSpecify MySQL root password"
+#      private: yes
+#      # confirm: yes?
+#      # encrypt?
+#
+#    - name: wp_db_name
+#      prompt: "\n------
+#              \nSpecify WordPress database name"
+#      private: no
+#      default: "wordpress"
+#
+#    - name: wp_db_tb_pre
+#      prompt: "\n------
+#              \nSpecify WordPress table prefix"
+#      private: no
+#      default: "wp_"
+#
+#    - name: wp_db_host
+#      prompt: "\n------
+#              \nSpecify WordPress host"
+#      private: no
+#      default: "mysql"
+#
+#    - name: wp_db_psw
+#      prompt: "\n------
+#              \nSpecify WordPress database password"
+#      private: yes
+#      # confirm: yes?
+#      # encrypt?
 
   roles:
   - AdnanHodzic.system-upgrade
