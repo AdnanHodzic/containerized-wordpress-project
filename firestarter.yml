@@ -33,6 +33,10 @@
   - AdnanHodzic.python-ubuntu-bootstrap
 
 # run as part of tasks section
+- hosts: aws-wp
+  remote_user: "{{ system_user }}"
+  become: yes
+
   roles:
   - AdnanHodzic.system-upgrade
   - AdnanHodzic.docker-compose-setup
