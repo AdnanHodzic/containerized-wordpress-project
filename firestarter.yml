@@ -1,6 +1,7 @@
 ---
 # install and setup all necessary roles
 - hosts: localhost
+  serial: 1
 
   tasks:
     - name: Create roles directory
@@ -27,7 +28,7 @@
   remote_user: "{{ system_user }}"
   become: yes
   gather_facts: no
-  serial: 1
+  serial: 2
 
   roles:
   - AdnanHodzic.python-ubuntu-bootstrap
@@ -36,6 +37,7 @@
 - hosts: aws-wp
   remote_user: "{{ system_user }}"
   become: yes
+  serial: 3
 
   roles:
   - AdnanHodzic.system-upgrade
