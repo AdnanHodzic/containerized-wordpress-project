@@ -1,8 +1,3 @@
-# Roles required for "project-deploy.yml" playbook to run all defined roles.
-#
-# install by running:
-# ansible-galaxy install -r requirements.yml
-
 - name: AdnanHodzic.python-ubuntu-bootstrap
   src: https://github.com/AdnanHodzic/ansible-role-python-ubuntu-bootstrap
   version: master
@@ -11,10 +6,10 @@
   src: https://github.com/AdnanHodzic/ansible-role-system-upgrade
   version: master
 
-- name: AdnanHodzic.docker-compose
-  src: https://github.com/AdnanHodzic/ansible-role-docker-compose
+- name: AdnanHodzic.docker-compose-setup
+  src: https://github.com/AdnanHodzic/ansible-role-docker-compose-setup
   version: master
 
-- name: AdnanHodzic.wordpress-docker-deploy
-  src: https://github.com/AdnanHodzic/ansible-role-wordpress-docker-deploy
+- name: AdnanHodzic.containerized-wordpress
+  src: https://github.com/AdnanHodzic/ansible-role-containerized-wordpress
   version: master

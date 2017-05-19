@@ -1,0 +1,39 @@
+---
+# install and setup all necessary roles
+- hosts: localhost
+
+  tasks:
+    - name: Create roles directory
+      file:
+        path: roles
+        state: directory
+
+    - name: Install roles from requirements.yml to roles/
+      local_action: command ansible-galaxy install -r requirements.yml --roles-path roles
+
+    # ToDo: remove?
+    - lineinfile:
+        dest: .gitignore
+        regexp: '^\/roles$'
+        line: '/roles'
+        state: present
+
+# run as part of pre_tasks section
+- hosts: aws-wp
+
+  vars_files:
+    - defaults/main.yml
+
+  remote_user: "{{ system_user }}"
+  become: yes
+  gather_facts: no
+  serial: 1
+
+  roles:
+  - AdnanHodzic.python-ubuntu-bootstrap
+
+# run as part of tasks section
+  roles:
+  - AdnanHodzic.system-upgrade
+  - AdnanHodzic.docker-compose-setup
+  - AdnanHodzic.containerized-wordpress
