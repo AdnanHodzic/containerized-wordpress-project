@@ -19,7 +19,7 @@
         line: '/roles'
         state: present
 
-# run as part of pre_tasks section
+# run all roles on new host
 - hosts: aws-wp
 
   vars_files:
@@ -32,14 +32,6 @@
 
   roles:
   - AdnanHodzic.python-ubuntu-bootstrap
-
-# run as part of tasks section
-- hosts: aws-wp
-  remote_user: "{{ system_user }}"
-  become: yes
-  serial: 3
-
-  roles:
   - AdnanHodzic.system-upgrade
   - AdnanHodzic.docker-compose-setup
   - AdnanHodzic.containerized-wordpress
