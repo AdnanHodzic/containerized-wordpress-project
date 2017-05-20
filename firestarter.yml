@@ -1,5 +1,5 @@
 ---
-# install and setup all necessary roles
+# install and setup all necessary roles locally
 - hosts: localhost
   serial: 1
 
@@ -19,7 +19,8 @@
         line: '/roles'
         state: present
 
-# run all roles on new host
+# after variable input, run all roles necessary to deploy and run (out of box)
+# WordPress instance (3 separate containers running WordPress PHP7 FPM, Nginx and MariaDB)
 - hosts: aws-wp
 
   vars_files:
@@ -68,7 +69,6 @@
       private: yes
       default: "change-M3"
       confirm: yes
-      # encrypt?
 
   roles:
   - AdnanHodzic.python-ubuntu-bootstrap
