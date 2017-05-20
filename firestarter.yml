@@ -30,6 +30,46 @@
   gather_facts: no
   serial: 2
 
+  vars_prompt:
+
+    - name: domain
+      prompt: "\n------
+              \n\nSpecify blog URL"
+      private: no
+      default: "foolcontrol.org"
+
+    - name: wp_version
+      prompt: "\n------
+              \n\nSpecify WordPress version you'd like to use"
+      private: no
+      default: "4.7.5"
+
+    - name: wp_db_name
+      prompt: "\n------
+              \n\nSpecify WordPress database name"
+      private: no
+      default: "wordpress"
+
+    - name: wp_db_tb_pre
+      prompt: "\n------
+              \n\nSpecify WordPress table prefix"
+      private: no
+      default: "wp_"
+
+    - name: wp_db_host
+      prompt: "\n------
+              \n\nSpecify WordPress host"
+      private: no
+      default: "mysql"
+
+    - name: wp_db_psw
+      prompt: "\n------
+              \n\nSpecify WordPress database password"
+      private: yes
+      default: "change-M3"
+      confirm: yes
+      # encrypt?
+
   roles:
   - AdnanHodzic.python-ubuntu-bootstrap
   - AdnanHodzic.system-upgrade
