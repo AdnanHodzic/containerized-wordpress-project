@@ -6,16 +6,6 @@ system_user: ubuntu
 #compose_project_dir: /home/{{ system_user }}/compose-wordpress
 #domain: foolcontrol.org
 #wp_version: 4.7.5
-
-# works:
-#mysql_root_psw: change-M3
-#mysql_root_psw: custom-psw
-
-# doesn't work
-#mysql_root_psw: 81xUlYwKHXev
-
-mysql_root_psw: x81UlYwKHX
-
 #wp_db_name: wordpress
 #wp_db_tb_pre: wp_
 #wp_db_host: mysql
