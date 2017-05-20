@@ -1,11 +1,13 @@
 ---
-# defaults file for wordpress-docker
+# list of default variables which if left commented
+# will be picked from AdnanHodzic.containerized-wordpress role
+
 system_user: ubuntu
-compose_project_dir: /home/{{ system_user }}/compose-wordpress
-domain: custom.blog.org
-wp_version: 4.7.1
-mysql_root_psw: custom-psw
-wp_db_name: wordpress
-wp_db_tb_pre: wp_
-wp_db_host: mysql
-wp_db_psw: custom-psw
+#compose_project_dir: /home/{{ system_user }}/compose-wordpress
+#domain: foolcontrol.org
+#wp_version: 4.7.5
+#mysql_root_psw: change-M3
+#wp_db_name: wordpress
+#wp_db_tb_pre: wp_
+#wp_db_host: mysql
+#wp_db_psw: change-M3
