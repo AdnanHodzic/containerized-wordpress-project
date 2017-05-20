@@ -20,4 +20,4 @@ system_user: ubuntu
 # If you want to specify all variables without interactive prompts, can you
 # do so by using: --extra-vars
 # 
-# Please see $URL_here for more details
+# Please see http://foolcontrol.org/?p=2002 for more details
