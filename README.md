@@ -1,6 +1,6 @@
 # containerized-wordpress-project
 
-Automagically deploy & run containerized WordPress (PHP7 FPM, Nginx, MariaDB) using Ansible + Docker on AWS. This whole process will be done in <= 5 minutes and doesn't require any Docker or Ansible knowledge!
+Automagically deploy & run containerized WordPress (PHP7 FPM, Nginx, MariaDB) using Ansible + Docker on AWS. This whole process will be completed in <= 5 minutes and doesn't require any Docker or Ansible knowledge!
 
 Discussion: [blog post](http://foolcontrol.org/?p=2002)
 
