@@ -6,6 +6,12 @@ Automagically deploy & run containerized WordPress (PHP7 FPM, Nginx, MariaDB) us
 * Ubuntu Linux instance running in AWS (preferebaly new one, so new that you haven't even SSH-ed to it)
 * Ansible installed on (local) host you'll be running this playbook on
 
+## Demo
+
+* [Console output of running "containerized-wordpress" Ansible Playbook](https://s3.eu-central-1.amazonaws.com/adnan-public-images/blog/containerized-wordpress.yml+ansible+playbook+demo.jpg)
+
+* [Accessing WordPress instance created from "containerized-wordpress" Ansible Playbook](https://s3.eu-central-1.amazonaws.com/adnan-public-images/blog/containerized-wordpress.yml+ansible+playbook+demo+results.jpg)
+
 ## Technical rationale/What is this sorcery?
 
 This project consists of single Ansible playbook, which when run consits of 2 major steps.
@@ -47,7 +53,7 @@ This Ansible playbook will Deploy & run Docker Compose project for WordPress ins
 * Nginx
 * MariaDB
 
-## HowTo run
+## HowTo run containerized-wordpress playbook?
 
 Once you have everything that was mentioned in "Requirements" section, this whole process will consists of 3 steps:
 
@@ -72,7 +78,18 @@ ansible-playbook containerized-wordpress.yml -i host
 
 After which all you need to do is follow on screen instructions. Process which in <= 5 minutes, host you defined in "hosts" will be fully updated, configured and running containerized WordPress instance.
 
-DEMO here
+Please note that default values are defined in square brackets, which you can use by simply hitting enter, i.e:
+```
+Specify WordPress database name [wordpress]:
+```
 
+In this case your WordPress database name will be: "wordpress".
 
+## HowTo run containerized-wordpress playbook in non interactive mode (parameters)?
+
+If you want to run this playbook in non interactive mode (which is enabled by default) using parametrers, you can do so by:
+
+```
+ansible-playbook firestarter.yml -i hosts --extra-vars "domain=custom.domain2.com wp_version=4.7.5 wp_db_name=wpdb wp_db_tb_pre=wp_ wp_db_host=mysql wp_db_psw=change-M3"
+```
 
