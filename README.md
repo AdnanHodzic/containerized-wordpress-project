@@ -60,7 +60,7 @@ This Ansible playbook will Deploy & run Docker Compose project for WordPress ins
 
 Once run, this (containerized-wordpress) playbook will guide you through interactive setup of all 3 containers, after which it will run all above mentioned Ansble playbooks. End result is that host you have never even SSH-ed to will be fully configured and running containerized WordPress image out of box.
 
-## HowTo run containerized-wordpress playbook?
+## HowTo: run containerized-wordpress playbook?
 
 Once you have everything that was mentioned in "Requirements" section, this whole process will consists of 3 steps:
 
@@ -92,7 +92,7 @@ Specify WordPress database name [wordpress]:
 
 In this case your WordPress database name will be: "wordpress".
 
-## HowTo run containerized-wordpress playbook in non interactive mode (parameters)?
+## HowTo: run containerized-wordpress playbook in non interactive mode (parameters)?
 
 If you want to run this playbook in non interactive mode (which is enabled by default) using parametrers, you can do so by:
 
@@ -102,8 +102,9 @@ ansible-playbook firestarter.yml -i hosts --extra-vars "domain=custom.domain2.co
 
 ## Troubleshooting
 
-Q: In case of host reboot, will all services and Docker images start automatically on boot?
-A: Yes
+**Q:** In case of host reboot, will all services and Docker images start automatically on boot?
+
+**A:** Yes
 
 
 If you have any issues or questions, please feel free to submit an issue.
