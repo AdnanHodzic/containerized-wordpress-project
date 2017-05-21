@@ -1,5 +1,8 @@
 # containerized-wordpress-project
-Automagically deploy & run containerized WordPress (PHP7 FPM, Nginx, MariaDB) using Ansible + Docker on AWS in <= 5 minutes!
+
+Automagically deploy & run containerized WordPress (PHP7 FPM, Nginx, MariaDB) using Ansible + Docker on AWS. This whole process will be done in <= 5 minutes and doesn't require any Docker or Ansible knowledge!
+
+Discussion: [blog post](http://foolcontrol.org/?p=2002)
 
 ## Requirements
 
@@ -14,7 +17,7 @@ Automagically deploy & run containerized WordPress (PHP7 FPM, Nginx, MariaDB) us
 
 ## Technical rationale/What is this sorcery?
 
-This project consists of single Ansible playbook, which when run consits of 2 major steps.
+This project consists of single Ansible playbook, which when run consits of 3 (fully automated) steps.
 
 **Step 1: Setup local environment to run all necessary roles**
 
@@ -52,6 +55,10 @@ This Ansible playbook will Deploy & run Docker Compose project for WordPress ins
 * WordPress (PHP7 FPM)
 * Nginx
 * MariaDB
+
+**Step 3: Interactive Docker images configuration and deployment**
+
+Once run, this (containerized-wordpress) playbook will guide you through interactive setup of all 3 containers, after which it will run all above mentioned Ansble playbooks. End result is that host you have never even SSH-ed to will be fully configured and running containerized WordPress image out of box.
 
 ## HowTo run containerized-wordpress playbook?
 
@@ -93,3 +100,10 @@ If you want to run this playbook in non interactive mode (which is enabled by de
 ansible-playbook firestarter.yml -i hosts --extra-vars "domain=custom.domain2.com wp_version=4.7.5 wp_db_name=wpdb wp_db_tb_pre=wp_ wp_db_host=mysql wp_db_psw=change-M3"
 ```
 
+## Troubleshooting
+
+Q: In case of host reboot, will all services and Docker images start automatically on boot?
+A: Yes
+
+
+If you have any issues or questions, please feel free to submit an issue.
