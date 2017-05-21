@@ -38,7 +38,8 @@ This Ansible role will perform upgrade of all software packages on Ubunty host. 
 * Update APT cache
 * Check if there are any available updates
 * Perform upgrade of all packages to the latest version (dist)
-* Check if a reboot is required, if it is reboot the host/server  * Wait for server to come back after reboot, and report once it's back-up and running.
+* Check if a reboot is required, if it is reboot the host/server
+* Wait for server to come back after reboot, and report once it's back-up and running.
 
 **[AdnanHodzic.docker-compose-setup](https://galaxy.ansible.com/AdnanHodzic/docker-compose-setup/)**
 
