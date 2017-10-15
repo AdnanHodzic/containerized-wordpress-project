@@ -15,6 +15,52 @@ Discussion: [blog post](http://foolcontrol.org/?p=2002)
 
 * [Accessing WordPress instance created from "containerized-wordpress" Ansible Playbook](https://s3.eu-central-1.amazonaws.com/adnan-public-images/blog/containerized-wordpress.yml+ansible+playbook+demo+results.jpg)
 
+## HowTo: run containerized-wordpress playbook?
+
+Once you have everything that was mentioned in "Requirements" section, this whole process will consists of 3 steps:
+
+**1. Get source code for containerized-wordpress-proejct, i.e:**
+
+```
+git clone https://github.com/AdnanHodzic/containerized-wordpress-project.git
+```
+
+**2. Update containerized-wordpress-project/hosts inventory file with your AWS instance Public IP, i.e:**
+
+```
+[aws-wp]
+52.57.201.103
+```
+
+**3. Install dependency roles**
+
+```
+sudo ansible-galaxy install -r requirements.yml
+```
+
+**4. Run containerized-wordpress playbook, using hosts inventory file, i.e:**
+
+```
+ansible-playbook containerized-wordpress.yml -i hosts
+```
+
+After which all you need to do is follow on screen instructions. Process which in <= 5 minutes, host you defined in "hosts" will be fully updated, configured and running containerized WordPress instance.
+
+Please note that default values are defined in square brackets, which you can use by simply hitting enter, i.e:
+```
+Specify WordPress database name [wordpress]:
+```
+
+In this case your WordPress database name will be: "wordpress".
+
+## HowTo: run containerized-wordpress playbook in non interactive mode (parameters)?
+
+If you want to run this playbook in non interactive mode (which is enabled by default) using parametrers, you can do so by:
+
+```
+ansible-playbook containerized-wordpress.yml -i hosts --extra-vars "domain=custom.domain2.com wp_version=4.7.5 wp_db_name=wpdb wp_db_tb_pre=wp_ wp_db_host=mysql wp_db_psw=change-M3"
+```
+
 ## Technical rationale/What is this sorcery?
 
 This project consists of single Ansible playbook, which when run consits of 3 (fully automated) steps.
@@ -60,52 +106,6 @@ This Ansible playbook will Deploy & run Docker Compose project for WordPress ins
 **Step 3: Interactive Docker images configuration and deployment**
 
 Once run, this (containerized-wordpress) playbook will guide you through interactive setup of all 3 containers, after which it will run all above mentioned Ansible roles. End result is that host you have never even SSH-ed to will be fully configured and running containerized WordPress image out of box.
-
-## HowTo: run containerized-wordpress playbook?
-
-Once you have everything that was mentioned in "Requirements" section, this whole process will consists of 3 steps:
-
-**1. Get source code for containerized-wordpress-proejct, i.e:**
-
-```
-git clone https://github.com/AdnanHodzic/containerized-wordpress-project.git
-```
-
-**2. Update containerized-wordpress-project/hosts inventory file with your AWS instance Public IP, i.e:**
-
-```
-[aws-wp]
-52.57.201.103
-```
-
-**3. Install dependency roles**
-
-```
-sudo ansible-galaxy install -r requirements.yml
-```
-
-**4. Run containerized-wordpress playbook, using hosts inventory file, i.e:**
-
-```
-ansible-playbook containerized-wordpress.yml -i hosts
-```
-
-After which all you need to do is follow on screen instructions. Process which in <= 5 minutes, host you defined in "hosts" will be fully updated, configured and running containerized WordPress instance.
-
-Please note that default values are defined in square brackets, which you can use by simply hitting enter, i.e:
-```
-Specify WordPress database name [wordpress]:
-```
-
-In this case your WordPress database name will be: "wordpress".
-
-## HowTo: run containerized-wordpress playbook in non interactive mode (parameters)?
-
-If you want to run this playbook in non interactive mode (which is enabled by default) using parametrers, you can do so by:
-
-```
-ansible-playbook firestarter.yml -i hosts --extra-vars "domain=custom.domain2.com wp_version=4.7.5 wp_db_name=wpdb wp_db_tb_pre=wp_ wp_db_host=mysql wp_db_psw=change-M3"
-```
 
 ## Troubleshooting
 
