@@ -9,7 +9,6 @@
   remote_user: "{{ system_user }}"
   become: yes
   gather_facts: no
-  serial: 2
 
   vars_prompt:
 
