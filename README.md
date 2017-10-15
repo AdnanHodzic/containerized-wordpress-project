@@ -81,7 +81,7 @@ git clone https://github.com/AdnanHodzic/containerized-wordpress-project.git
 **3. Run containerized-wordpress playbook, using hosts inventory file, i.e:**
 
 ```
-ansible-playbook containerized-wordpress.yml -i host
+ansible-playbook containerized-wordpress.yml -i hosts
 ```
 
 After which all you need to do is follow on screen instructions. Process which in <= 5 minutes, host you defined in "hosts" will be fully updated, configured and running containerized WordPress instance.
