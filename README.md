@@ -78,7 +78,13 @@ git clone https://github.com/AdnanHodzic/containerized-wordpress-project.git
 52.57.201.103
 ```
 
-**3. Run containerized-wordpress playbook, using hosts inventory file, i.e:**
+**3. Install dependency roles**
+
+```
+sudo ansible-galaxy install -r requirements.yml
+```
+
+**4. Run containerized-wordpress playbook, using hosts inventory file, i.e:**
 
 ```
 ansible-playbook containerized-wordpress.yml -i hosts
