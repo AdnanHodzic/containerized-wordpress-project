@@ -87,7 +87,7 @@ This Ansible role will perform upgrade of all software packages on Ubunty host. 
 * Check if a reboot is required, if it is reboot the host/server
 * Wait for server to come back after reboot, and report once it's back-up and running.
 
-**[AdnanHodzic.docker-compose-setup](https://galaxy.ansible.com/AdnanHodzic/docker-compose-setup/)**
+**[AdnanHodzic.docker-compose](https://galaxy.ansible.com/AdnanHodzic/docker-compose/)**
 
 This Ansible role will perform all necessary tasks to setup and run Docker and Docker Compose:
 
