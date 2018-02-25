@@ -17,7 +17,7 @@
       prompt: "\n------
               \n\nSpecify WordPress version you'd like to use"
       private: no
-      default: "4.7.5"
+      default: "4.9.4"
 
     - name: wp_db_name
       prompt: "\n------
@@ -47,5 +47,5 @@
   roles:
   - AdnanHodzic.python-ubuntu-bootstrap
   - AdnanHodzic.system-upgrade
-  - AdnanHodzic.docker-compose-setup
+  - AdnanHodzic.docker-compose
   - AdnanHodzic.containerized-wordpress

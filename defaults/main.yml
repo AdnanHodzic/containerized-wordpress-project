@@ -11,7 +11,7 @@ system_user: ubuntu
 # taken during prompts, following values for those variables will be used:
 #
 # domain: foolcontrol.org
-# wp_version: 4.7.5
+# wp_version: 4.9.4
 # wp_db_name: wordpress
 # wp_db_tb_pre: wp_
 # wp_db_host: mysql
