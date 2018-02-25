@@ -1,4 +1,4 @@
 - name: AdnanHodzic.python-ubuntu-bootstrap
 - name: AdnanHodzic.system-upgrade
-- name: AdnanHodzic.docker-compose-setup
+- name: AdnanHodzic.docker-compose
 - name: AdnanHodzic.containerized-wordpress
