@@ -46,6 +46,6 @@
 
   roles:
   - AdnanHodzic.python-ubuntu-bootstrap
-  - AdnanHodzic.system-upgrade
+  #- AdnanHodzic.system-upgrade
   - AdnanHodzic.docker-compose
   - AdnanHodzic.containerized-wordpress
