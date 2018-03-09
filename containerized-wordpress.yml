@@ -13,6 +13,13 @@
       private: no
       default: "foolcontrol.org"
 
+    - name: stage
+      prompt: "\n------
+              \n\nIs specified site live (DNS is setup)?
+              \n\nFor testing use \"false\", more info: https://goo.gl/RhFU7n"
+      private: no
+      default: "false"
+
     - name: wp_version
       prompt: "\n------
               \n\nSpecify WordPress version you'd like to use"

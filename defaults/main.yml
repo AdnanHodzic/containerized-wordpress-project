@@ -11,6 +11,7 @@ system_user: ubuntu
 # taken during prompts, following values for those variables will be used:
 #
 # domain: foolcontrol.org
+# stage: false
 # wp_version: 4.9.4
 # php_fmp_version: php7.1-fpm
 # wp_db_name: wordpress
