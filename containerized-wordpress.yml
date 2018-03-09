@@ -19,6 +19,12 @@
       private: no
       default: "4.9.4"
 
+    - name: php_fmp_version
+      prompt: "\n------
+              \n\nSpecify PHP-FPM version"
+      private: no
+      default: "php7.1-fpm"
+
     - name: wp_db_name
       prompt: "\n------
               \n\nSpecify WordPress database name"
@@ -45,7 +51,8 @@
       confirm: yes
 
   roles:
-  - AdnanHodzic.python-ubuntu-bootstrap
+  #- AdnanHodzic.python-ubuntu-bootstrap
   #- AdnanHodzic.system-upgrade
-  - AdnanHodzic.docker-compose
-  - AdnanHodzic.containerized-wordpress
+  #- AdnanHodzic.docker-compose
+  #- AdnanHodzic.containerized-wordpress
+  - ansible-role-containerized-wordpress

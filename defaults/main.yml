@@ -12,6 +12,7 @@ system_user: ubuntu
 #
 # domain: foolcontrol.org
 # wp_version: 4.9.4
+# php_fmp_version: php7.1-fpm
 # wp_db_name: wordpress
 # wp_db_tb_pre: wp_
 # wp_db_host: mysql
