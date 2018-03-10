@@ -16,9 +16,9 @@ Blog post discussion:
 
 ## Demo
 
-* [Console output of running "containerized-wordpress" Ansible Playbook](https://s3.eu-central-1.amazonaws.com/adnan-public-images/blog/containerized-wordpress.yml+ansible+playbook+demo.jpg)
+* [Console output of running "containerized-wordpress" Ansible Playbook](http://foolcontrol.org/wp-content/uploads/2018/03/containerized-wordpress-run-with-lets-encrypt-2.png)
 
-* [Accessing WordPress instance created from "containerized-wordpress" Ansible Playbook](https://s3.eu-central-1.amazonaws.com/adnan-public-images/blog/containerized-wordpress.yml+ansible+playbook+demo+results.jpg)
+* [Accessing WordPress instance created from "containerized-wordpress" Ansible Playbook](http://foolcontrol.org/wp-content/uploads/2017/05/containerized-wordpress.ymlansibleplaybookdemoresults.jpg)
 
 ## HowTo: run containerized-wordpress playbook?
 
