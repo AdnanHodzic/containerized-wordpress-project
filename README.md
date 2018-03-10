@@ -12,7 +12,7 @@ Blog post discussion:
 
 * Ubuntu Linux instance running in AWS (preferebaly new one, so new that you haven't even SSH-ed to it)
 * Ansible installed on (local) host you'll be running this playbook on
-* Port 80 and 443 must be enabled
+* Port 80 (HTTP) and 443 (HTTPS) must be enabled
 
 ## Demo
 
