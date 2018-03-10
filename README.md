@@ -14,12 +14,6 @@ Blog post discussion:
 * Ansible installed on (local) host you'll be running this playbook on
 * Port 80 (HTTP) and 443 (HTTPS) must be enabled
 
-## Demo
-
-* [Console output of running "containerized-wordpress" Ansible Playbook](http://foolcontrol.org/wp-content/uploads/2018/03/containerized-wordpress-run-with-lets-encrypt-2.png)
-
-* [Accessing WordPress instance created from "containerized-wordpress" Ansible Playbook](http://foolcontrol.org/wp-content/uploads/2017/05/containerized-wordpress.ymlansibleplaybookdemoresults.jpg)
-
 ## HowTo: run containerized-wordpress playbook?
 
 Once you have everything that was mentioned in "Requirements" section, this whole process will consists of 3 steps:
@@ -57,6 +51,8 @@ Specify WordPress database name [wordpress]:
 ```
 
 In this case your WordPress database name will be: "wordpress".
+
+* [Console output of running "containerized-wordpress" Ansible Playbook](http://foolcontrol.org/wp-content/uploads/2018/03/containerized-wordpress-run-with-lets-encrypt-2.png)
 
 #### 5. Let's Encrypt certificates (HTTPS encryption)
 
