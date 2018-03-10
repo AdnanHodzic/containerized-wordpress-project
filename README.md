@@ -1,8 +1,12 @@
 # containerized-wordpress-project
 
-Automagically deploy & run containerized WordPress (PHP7 FPM, Nginx, MariaDB) using Ansible + Docker on AWS. This whole process will be completed in <= 5 minutes and doesn't require any Docker or Ansible knowledge!
+Automagically deploy & run containerized WordPress (PHP7 FPM, Nginx, MariaDB) with Let's Encrypt HTTPS encryption using Ansible + Docker. 
 
-Discussion: [blog post](http://foolcontrol.org/?p=2002)
+This whole process will be completed in <= 5 minutes and doesn't require any Docker or Ansible knowledge!
+
+Blog post discussion: 
+* [Automated way of getting Let’s Encrypt certificates for WordPress using Docker + Ansible](http://foolcontrol.org/?p=2758)
+* [Automagically deploy & run containerized WordPress (PHP7 FPM, Nginx, MariaDB) using Ansible + Docker on AWS](http://foolcontrol.org/?p=2002)
 
 ## Requirements
 
@@ -25,11 +29,11 @@ Once you have everything that was mentioned in "Requirements" section, this whol
 git clone https://github.com/AdnanHodzic/containerized-wordpress-project.git
 ```
 
-**2. Update containerized-wordpress-project/hosts inventory file with your AWS instance Public IP, i.e:**
+**2. Update containerized-wordpress-project/hosts inventory file with AWS instance URL or Public IP, i.e:**
 
 ```
 [aws-wp]
-52.57.201.103
+foolcontrol.org
 ```
 
 **3. Install dependency roles**
@@ -52,6 +56,10 @@ Specify WordPress database name [wordpress]:
 ```
 
 In this case your WordPress database name will be: "wordpress".
+
+#### 5. Let's Encrypt certificates (HTTPS encryption)
+
+updating ...
 
 ## HowTo: run containerized-wordpress playbook in non interactive mode (parameters)?
 
@@ -100,7 +108,7 @@ This Ansible role will perform all necessary tasks to setup and run Docker and D
 
 This Ansible playbook will Deploy & run Docker Compose project for WordPress instance. Which consists of 3 separate containers running:
 * WordPress (PHP7 FPM)
-* Nginx
+* Nginx (enabled with Let's Encrpt HTTPS encryption)
 * MariaDB
 
 **Step 3: Interactive Docker images configuration and deployment**
