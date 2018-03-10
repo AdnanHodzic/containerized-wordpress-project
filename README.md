@@ -36,7 +36,7 @@ git clone https://github.com/AdnanHodzic/containerized-wordpress-project.git
 foolcontrol.org
 ```
 
-#### 3. Install dependency roles**
+#### 3. Install dependency roles
 
 ```
 sudo ansible-galaxy install -r requirements.yml
@@ -59,8 +59,18 @@ In this case your WordPress database name will be: "wordpress".
 
 #### 5. Let's Encrypt certificates (HTTPS encryption)
 
-It's strongly recommended to use `false` (default) with your initial deployment. 
+Example of site stage parameter:
 
+```
+Is specified site live (DNS is setup)?
+
+Import info: https://goo.gl/XMbnPH [false]:
+```
+
+It's strongly recommended to use `false` (default) with your initial deployment to test potential setup. In this case, a self-signed certificate will be created with [Let's Encrypt's staging environemnt](https://letsencrypt.org/docs/staging-environment/).
+
+Only use `true` if DNS is setup and propagated for the specified domain name. In this case, an actual Let's Encrypt certificate will be registered and in case of failure you may hit rate limit for your domain! For more information, please see [Let's Encrypt Rate Limit](https://letsencrypt.org/docs/rate-limits/)
+ 
 ## HowTo: run containerized-wordpress playbook in non interactive mode (parameters)?
 
 If you want to run this playbook in non interactive mode (which is enabled by default) using parametrers, you can do so by:
