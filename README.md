@@ -59,7 +59,7 @@ In this case your WordPress database name will be: "wordpress".
 
 #### 5. Let's Encrypt certificates (HTTPS encryption)
 
-updating ...
+It's strongly recommended to use `false` (default) with your initial deployment. 
 
 ## HowTo: run containerized-wordpress playbook in non interactive mode (parameters)?
 
@@ -118,6 +118,12 @@ Once run, this (containerized-wordpress) playbook will guide you through interac
 ## Troubleshooting
 
 **Q:** In case of host reboot, will all services and Docker images start automatically on boot?
+
+**A:** Yes
+
+***
+
+**Q:** Are Let's Encrypt certificates automatically renewed?
 
 **A:** Yes
 
