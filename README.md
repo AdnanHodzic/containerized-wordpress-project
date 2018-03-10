@@ -116,7 +116,7 @@ This Ansible role will perform all necessary tasks to setup and run Docker and D
 
 #### [AdnanHodzic.containerized-wordpress](https://galaxy.ansible.com/AdnanHodzic/containerized-wordpress/)
 
-This Ansible playbook will Deploy & run Docker Compose project for WordPress instance. Which consists of 3 separate containers running:
+This Ansible playbook will Deploy & run Docker Compose project for WordPress instance. It will also configure Let's Encrypt certificates for specified domain. It consists of 3 separate containers running:
 * WordPress (PHP7 FPM)
 * Nginx (enabled with Let's Encrpt HTTPS encryption)
 * MariaDB
