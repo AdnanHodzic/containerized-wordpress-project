@@ -39,7 +39,7 @@ foolcontrol.org
 #### 3. Install dependency roles
 
 ```
-sudo ansible-galaxy install -r requirements.yml
+ansible-galaxy install -r requirements.yml
 ```
 
 #### 4. Run containerized-wordpress playbook, using hosts inventory file, i.e:
