@@ -58,8 +58,7 @@
       confirm: yes
 
   roles:
-  #- AdnanHodzic.python-ubuntu-bootstrap
-  #- AdnanHodzic.system-upgrade
-  #- AdnanHodzic.docker-compose
-  #- AdnanHodzic.containerized-wordpress
-  - ansible-role-containerized-wordpress
+  - AdnanHodzic.python-ubuntu-bootstrap
+  - AdnanHodzic.system-upgrade
+  - AdnanHodzic.docker-compose
+  - AdnanHodzic.containerized-wordpress
