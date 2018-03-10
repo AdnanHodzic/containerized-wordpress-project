@@ -16,7 +16,7 @@
     - name: stage
       prompt: "\n------
               \n\nIs specified site live (DNS is setup)?
-              \n\nFor testing use \"false\", more info: https://goo.gl/RhFU7n"
+              \n\nImport info: https://goo.gl/XMbnPH"
       private: no
       default: "false"
 
