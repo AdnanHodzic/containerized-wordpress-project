@@ -7,6 +7,19 @@
   gather_facts: no
 
   vars_prompt:
+
+    - name: distribution 
+      prompt: "\n------
+              \n\nEnter the number of which distribution you have?\n\n1. Ubuntu\n2. CentOS\n\n"
+      private: no 
+      default: "1"
+
+    - name: system_user
+      prompt: "\n------
+              \n\n What is the system username?"
+      private: no 
+      default: "ubuntu"
+
     - name: domain
       prompt: "\n------
               \n\nSpecify blog URL"
@@ -58,7 +71,10 @@
       confirm: yes
 
   roles:
-  - AdnanHodzic.python-ubuntu-bootstrap
-  - AdnanHodzic.system-upgrade
-  - AdnanHodzic.docker-compose
+  - { role: AdnanHodzic.python-ubuntu-bootstrap, when: distribution == "1"}
+  - { role: AdnanHodzic.system-upgrade, when: distribution == "1"}
+  - { role: AdnanHodzic.docker-compose, when: distribution == "1"} 
+  - { role: ansible-role-python-centos-bootstrap, when: distribution == "2" }
+  - { role: ansible-role-centos-system-upgrade, when: distribution == "2" }
+  - { role: ansible-role-centos-docker-compose-setup, when: distribution == "2" }
   - AdnanHodzic.containerized-wordpress

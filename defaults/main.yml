@@ -3,7 +3,7 @@
 # AdnanHodzic.containerized-wordpress role's defaults/main.yml file.
 # Direct URL to this file: https://goo.gl/FxXq4R
 
-system_user: ubuntu
+# system_user: ubuntu 
 #compose_project_dir: /home/{{ system_user }}/compose-wordpress
 
 # Rest of its variables are overridden by vars_prompt section of this playbook.
