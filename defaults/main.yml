@@ -12,7 +12,7 @@
 #
 # domain: foolcontrol.org
 # stage: false
-# wp_version: 4.9.4
+# wp_version: 5.2.3
 # php_fmp_version: php7.1-fpm
 # wp_db_name: wordpress
 # wp_db_tb_pre: wp_

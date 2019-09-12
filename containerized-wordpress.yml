@@ -37,7 +37,7 @@
       prompt: "\n------
               \n\nSpecify WordPress version you'd like to use"
       private: no
-      default: "4.9.4"
+      default: "5.2.3"
 
     - name: php_fmp_version
       prompt: "\n------
