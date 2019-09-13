@@ -10,7 +10,7 @@ Blog post discussion:
 
 ## Requirements
 
-* Ubuntu Linux instance running in AWS (preferebaly new one, so new that you haven't even SSH-ed to it)
+* Ubuntu or CentOS Linux instance running in AWS (preferebaly new one, so new that you haven't even SSH-ed to it)
 * Ansible installed on (local) host you'll be running this playbook on
 * Port 80 (HTTP) and 443 (HTTPS) must be enabled
 
@@ -88,23 +88,36 @@ This project consists of single Ansible playbook, which when run consits of 3 (f
 
 It will create roles/ directory inside of containerized-wordpress-project/
 
-#### Step 2: Install roles from requirements.yml to roles/
+#### Step 2: Install roles from requirements.yml to roles directory (roles/)
 
 Roles it will install are:
 
 #### [AdnanHodzic.python-ubuntu-bootstrap](https://galaxy.ansible.com/AdnanHodzic/python-ubuntu-bootstrap/)
 
-This Ansible role will install Python on newly bootstrapped host. This is usually a new host which you never even SSH-ed to. In order for Ansible to work, Python must be installed (if missing).
+This Ansible role will install Python on newly bootstrapped Ubuntu host. This is usually a new host which you never even SSH-ed to. In order for Ansible to work, Python must be installed (if missing).
+
+#### [ansible-role-python-centos-bootstrap](https://github.com/iMartzen/ansible-role-python-centos-bootstrap)
+
+This Ansible role will install Python on newly bootstrapped CentOS host. This is usually a new host which you never even SSH-ed to. In order for Ansible to work, Python must be installed (if missing).
 
 #### [AdnanHodzic.system-upgrade](https://galaxy.ansible.com/AdnanHodzic/system-upgrade/)
 
-This Ansible role will perform upgrade of all software packages on Ubunty host. After which it will reboot host (only if required). If reboot was performed, it'll wait until host is back-up.
+This Ansible role will perform upgrade of all software packages on Ubuntu host. After which it will reboot host (only if required). If reboot was performed, it'll wait until host is back-up.
 
 * Update APT cache
 * Check if there are any available updates
 * Perform upgrade of all packages to the latest version (dist)
 * Check if a reboot is required, if it is reboot the host/server
 * Wait for server to come back after reboot, and report once it's back-up and running.
+
+#### [ansible-role-centos-system-upgrade](https://github.com/iMartzen/ansible-role-centos-system-upgrade)
+
+This Ansible role will perform upgrade of all software packages on CentOS host. After which it will reboot host (only if required). If reboot was performed, it'll wait until host is back-up.
+
+* Perform upgrade of all packages to the latest version (dist)
+* Check if a reboot is required, if it is reboot the host/server
+* Wait for server to come back after reboot, and report once it's back-up and running.
+
 
 #### [AdnanHodzic.docker-compose](https://galaxy.ansible.com/AdnanHodzic/docker-compose/)
 
@@ -114,6 +127,15 @@ This Ansible role will perform all necessary tasks to setup and run Docker and D
 * Add and setup official Docker APT repositories.
 * Install packages needed for AUFS storage drivers.
 * Add user to Docker group.
+
+#### [ansible-role-centos-docker-compose-setup](https://github.com/iMartzen/ansible-role-centos-docker-compose-setup)
+
+This Ansible role will perform all necessary tasks to setup and run Docker and Docker Compose:
+
+* Install packages necessary for YUM
+* Add and setup official Docker YUM repositories.
+* Add user to Docker group.
+* Start de Docker Daemon and enables it at start up
 
 #### [AdnanHodzic.containerized-wordpress](https://galaxy.ansible.com/AdnanHodzic/containerized-wordpress/)
 
