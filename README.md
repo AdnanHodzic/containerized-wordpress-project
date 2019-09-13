@@ -77,7 +77,7 @@ Only use `true` if DNS is setup and propagated for the specified domain name. In
 If you want to run this playbook in non interactive mode (which is enabled by default) using parametrers, you can do so by:
 
 ```
-ansible-playbook containerized-wordpress.yml -i hosts --extra-vars "domain=custom.domain2.com wp_version=4.9.4 wp_db_name=wpdb wp_db_tb_pre=wp_ wp_db_host=mysql wp_db_psw=change-M3"
+ansible-playbook containerized-wordpress.yml -i hosts --extra-vars "distribution=1 system_user=ubuntu domain=custom.domain2.com wp_version=5.2.3 wp_db_name=wpdb wp_db_tb_pre=wp_ wp_db_host=mysql wp_db_psw=change-M3"
 ```
 
 ## Technical rationale/What is this sorcery?
