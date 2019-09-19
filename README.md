@@ -11,7 +11,7 @@ Blog post discussion:
 ## Requirements
 
 * Ubuntu or CentOS Linux instance running in AWS (preferebaly new one, so new that you haven't even SSH-ed to it)
-* Ansible installed on (local) host you'll be running this playbook on
+* Ansible installed on (local) host you'll be running this playbook on (Ansible version should be greater than 2.7)
 * Port 80 (HTTP) and 443 (HTTPS) must be enabled
 
 ## HowTo: run containerized-wordpress playbook?
