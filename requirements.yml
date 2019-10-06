@@ -2,7 +2,7 @@
 - name: AdnanHodzic.system-upgrade
 - name: AdnanHodzic.docker-compose
 - name: AdnanHodzic.containerized-wordpress
+  version: develop
 - src: https://github.com/iMartzen/ansible-role-python-centos-bootstrap
 - src: https://github.com/iMartzen/ansible-role-centos-system-upgrade
 - src: https://github.com/iMartzen/ansible-role-centos-docker-compose-setup
-- src: https://github.com/AdnanHodzic/ansible-role-containerized-wordpress
