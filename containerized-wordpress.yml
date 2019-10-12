@@ -4,13 +4,13 @@
 - hosts: aws_wp
   remote_user: "{{ system_user }}"
   become: yes
-  gather_facts: no
+  gather_facts: yes
 
   vars_prompt:
 
     - name: distribution 
       prompt: "\n------
-              \n\nEnter the number of which distribution you have?\n\n1. Ubuntu\n2. CentOS\n\n"
+              \n\nEnter the number of Linux distribution you're deploying to:\n\n1. Ubuntu, Debian\n2. CentOS, RedHat\n\n"
       private: no 
       default: "1"
 
@@ -29,7 +29,7 @@
     - name: stage
       prompt: "\n------
               \n\nIs specified site live (DNS is setup)?
-              \n\nImport info: https://goo.gl/XMbnPH"
+              \n\nImportant info: https://goo.gl/XMbnPH"
       private: no
       default: "staging"
 
@@ -45,6 +45,18 @@
       private: no
       default: "wordpress"
 
+    - name: wp_db_user
+      prompt: "\n------
+              \n\nSpecify WordPress database user"
+      private: no
+      default: "admin"
+
+    - name: wp_db_psw
+      prompt: "\n------
+              \n\nSpecify WordPress database password"
+      private: no
+      default: "change-M3"
+
     - name: wp_db_tb_pre
       prompt: "\n------
               \n\nSpecify WordPress table prefix"
@@ -57,9 +69,9 @@
       private: no
       default: "mysql"
 
-    - name: wp_db_psw
+    - name: db_root_psw
       prompt: "\n------
-              \n\nSpecify WordPress database password"
+              \n\nSpecify database (MySQL) root password"
       private: yes
       default: "change-M3"
       confirm: yes
