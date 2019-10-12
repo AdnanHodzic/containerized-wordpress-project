@@ -11,9 +11,8 @@
 # taken during prompts, following values for those variables will be used:
 #
 # domain: foolcontrol.org
-# stage: false
-# wp_version: 5.2.3
-# php_fmp_version: php7.1-fpm
+# stage: staging
+# wp_version: latest
 # wp_db_name: wordpress
 # wp_db_tb_pre: wp_
 # wp_db_host: mysql

@@ -64,9 +64,9 @@ Is specified site live (DNS is setup)?
 Import info: https://goo.gl/XMbnPH [false]:
 ```
 
-It's strongly recommended to use `false` (default) with your initial deployment to test potential setup. In this case, a self-signed certificate will be created with [Let's Encrypt's staging environemnt](https://letsencrypt.org/docs/staging-environment/).
+It's strongly recommended to use `staging` (default) with your initial deployment to test potential setup. In this case, a self-signed certificate will be created with [Let's Encrypt's staging environemnt](https://letsencrypt.org/docs/staging-environment/).
 
-* [Demo of test instance running with `false` argument](https://foolcontrol.org/wp-content/uploads/2018/03/stage-false-test3.png)
+* [Demo of test instance running with `staging` argument](https://foolcontrol.org/wp-content/uploads/2018/03/stage-false-test3.png)
 
 Only use `true` if DNS is setup and propagated for the specified domain name. In this case, an actual Let's Encrypt certificate will be registered and in case of failure you may hit rate limit for your domain! For more information, please see [Let's Encrypt Rate Limit](https://letsencrypt.org/docs/rate-limits/)
 

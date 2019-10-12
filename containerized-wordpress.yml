@@ -31,19 +31,13 @@
               \n\nIs specified site live (DNS is setup)?
               \n\nImport info: https://goo.gl/XMbnPH"
       private: no
-      default: "false"
+      default: "staging"
 
     - name: wp_version
       prompt: "\n------
               \n\nSpecify WordPress version you'd like to use"
       private: no
-      default: "5.2.3"
-
-    - name: php_fmp_version
-      prompt: "\n------
-              \n\nSpecify PHP-FPM version"
-      private: no
-      default: "php7.1-fpm"
+      default: "latest"
 
     - name: wp_db_name
       prompt: "\n------
@@ -72,9 +66,9 @@
 
   roles:
   - { role: AdnanHodzic.python-ubuntu-bootstrap, when: distribution == "1"}
-  - { role: AdnanHodzic.system-upgrade, when: distribution == "1"}
+  #- { role: AdnanHodzic.system-upgrade, when: distribution == "1"}
   - { role: AdnanHodzic.docker-compose, when: distribution == "1"} 
   - { role: ansible-role-python-centos-bootstrap, when: distribution == "2" }
-  - { role: ansible-role-centos-system-upgrade, when: distribution == "2" }
+  #- { role: ansible-role-centos-system-upgrade, when: distribution == "2" }
   - { role: ansible-role-centos-docker-compose-setup, when: distribution == "2" }
   - AdnanHodzic.containerized-wordpress
