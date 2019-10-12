@@ -1,7 +1,7 @@
 ---
 # after variable input, run all roles necessary to deploy and run (out of box)
 # WordPress instance: 3 separate containers running WordPress, Nginx (Let's Encrypt) and MySQL
-- hosts: aws-wp
+- hosts: aws_wp
   remote_user: "{{ system_user }}"
   become: yes
   gather_facts: no
