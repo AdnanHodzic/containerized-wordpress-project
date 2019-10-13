@@ -13,10 +13,12 @@
 # domain: foolcontrol.org
 # stage: staging
 # wp_version: latest
+# wp_db_user: admin
+# wp_db_psw: change-M3
+# db_root_psw: change-M3
 # wp_db_name: wordpress
 # wp_db_tb_pre: wp_
 # wp_db_host: mysql
-# wp_db_psw: change-M3
 
 # If you want to specify all variables without interactive prompts, can you
 # do so by using: --extra-vars
