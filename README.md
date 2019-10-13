@@ -2,9 +2,13 @@
 
 Automagically deploy & run containerized WordPress with Let's Encrypt HTTPS encryption using Ansible + Docker.
 
-Supported platforms: Ubuntu/Debian and CentOS/RedHat.
-
 This whole process will be completed in <= 5 minutes and doesn't require any Docker or Ansible knowledge!
+
+Supported platforms:
+* Ubuntu
+* Debian
+* CentOS
+* RedHat
 
 Blog post discussion: 
 * [Automated way of getting Let’s Encrypt certificates for WordPress using Docker + Ansible](http://foolcontrol.org/?p=2758)
@@ -73,7 +77,7 @@ It's strongly recommended to use `staging` (default) with your initial deploymen
 
 Only use `true` if DNS is setup and propagated for the specified domain name. In this case, an actual Let's Encrypt certificate will be registered and in case of failure you may hit rate limit for your domain! For more information, please see [Let's Encrypt Rate Limit](https://letsencrypt.org/docs/rate-limits/)
 
-* [Demo of test instance running with `true` argument](https://foolcontrol.org/wp-content/uploads/2018/03/stage-live-test3.png)
+* [Demo of test instance running with `production` argument](https://foolcontrol.org/wp-content/uploads/2018/03/stage-live-test3.png)
  
 ## HowTo: run containerized-wordpress playbook in non interactive mode (parameters)?
 
@@ -142,7 +146,7 @@ This Ansible role will perform all necessary tasks to setup and run Docker and D
 
 #### [AdnanHodzic.containerized-wordpress](https://galaxy.ansible.com/AdnanHodzic/containerized-wordpress/)
 
-This Ansible playbook will Deploy & run Docker Compose project for WordPress instance. It will also configure Let's Encrypt certificates for specified domain. It consists of 3 separate (mutually connected) containers running: WordPress, Nginx (Let's Encrypt) and MySQL
+This Ansible playbook will Deploy & run [Docker Compose project for WordPress instance](https://github.com/AdnanHodzic/ansible-role-containerized-wordpress/blob/master/templates/docker-compose.j2). It will also configure Let's Encrypt certificates for specified domain. It consists of 3 separate (mutually connected) containers running: WordPress, Nginx (Let's Encrypt) and MySQL
 * WordPress
 * Nginx (enabled with Let's Encypt HTTPS encryption)
 * MySQL
@@ -152,8 +156,6 @@ This Ansible playbook will Deploy & run Docker Compose project for WordPress ins
 **Q:** In case of host reboot, will all services and Docker images start automatically on boot?
 
 **A:** Yes
-
-***
 
 **Q:** Are Let's Encrypt certificates automatically renewed?
 
