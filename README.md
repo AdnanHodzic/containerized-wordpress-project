@@ -85,7 +85,7 @@ ansible-playbook containerized-wordpress.yml -i hosts --extra-vars "distribution
 
 ## Technical rationale/What is this sorcery?
 
-This project consists of single Ansible playbook, which when run consits of 3 (fully automated) steps.
+Once run, this (containerized-wordpress) playbook will guide you through interactive setup of all 3 containers (WordPress, Nginx with Let's Encrypt for HTTPS encryption and MySQL). After which it will run all above mentioned Ansible roles. End result is that host you have never even SSH-ed to will be fully configured and running containerized WordPress image out of box.
 
 #### Step 1: Setup local environment to run all necessary roles
 
@@ -146,10 +146,6 @@ This Ansible playbook will Deploy & run Docker Compose project for WordPress ins
 * WordPress
 * Nginx (enabled with Let's Encypt HTTPS encryption)
 * MySQL
-
-## Interactive Docker images configuration and deployment
-
-Once run, this (containerized-wordpress) playbook will guide you through interactive setup of all 3 containers, after which it will run all above mentioned Ansible roles. End result is that host you have never even SSH-ed to will be fully configured and running containerized WordPress image out of box.
 
 ## Troubleshooting
 
