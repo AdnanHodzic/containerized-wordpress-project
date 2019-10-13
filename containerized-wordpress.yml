@@ -78,9 +78,9 @@
 
   roles:
   - { role: AdnanHodzic.python-ubuntu-bootstrap, when: distribution == "1"}
-  #- { role: AdnanHodzic.system-upgrade, when: distribution == "1"}
+  - { role: AdnanHodzic.system-upgrade, when: distribution == "1"}
   - { role: AdnanHodzic.docker-compose, when: distribution == "1"} 
   - { role: ansible-role-python-centos-bootstrap, when: distribution == "2" }
-  #- { role: ansible-role-centos-system-upgrade, when: distribution == "2" }
+  - { role: ansible-role-centos-system-upgrade, when: distribution == "2" }
   - { role: ansible-role-centos-docker-compose-setup, when: distribution == "2" }
   - AdnanHodzic.containerized-wordpress

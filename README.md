@@ -159,5 +159,13 @@ This Ansible playbook will Deploy & run Docker Compose project for WordPress ins
 
 **A:** Yes
 
+**Q:** Are multiple subdomains supported?
+**A:** Yes, as part of deployed `docker-compose.yml` file simply extend it to:
+
+```
+DOMAINS: foolcontrol.org -> http://wordpress:80, test.foolcontrol.org -> http://wordpress:80'
+```
+
+This will allow you to add as many subdomains as necessary.
 
 If you have any issues or questions, please feel free to submit an issue.
