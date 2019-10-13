@@ -37,7 +37,7 @@
       prompt: "\n------
               \n\nSpecify WordPress version you'd like to use"
       private: no
-      default: "latest"
+      default: "5.2.3"
 
     - name: wp_db_name
       prompt: "\n------

@@ -12,7 +12,7 @@
 #
 # domain: foolcontrol.org
 # stage: staging
-# wp_version: latest
+# wp_version: 5.2.3
 # wp_db_user: admin
 # wp_db_psw: change-M3
 # db_root_psw: change-M3
