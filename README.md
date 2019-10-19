@@ -68,20 +68,20 @@ Example of site stage parameter:
 ```
 Is specified site live (DNS is setup)?
 
-Import info: https://goo.gl/XMbnPH [false]:
+Import info: https://goo.gl/XMbnPH [staging]:
 ```
 
 It's strongly recommended to use `staging` (default) with your initial deployment to test potential setup. In this case, a self-signed certificate will be created with [Let's Encrypt's staging environemnt](https://letsencrypt.org/docs/staging-environment/).
 
 * [Demo of test instance running with `staging` argument](https://foolcontrol.org/wp-content/uploads/2018/03/stage-false-test3.png)
 
-Only use `true` if DNS is setup and propagated for the specified domain name. In this case, an actual Let's Encrypt certificate will be registered and in case of failure you may hit rate limit for your domain! For more information, please see [Let's Encrypt Rate Limit](https://letsencrypt.org/docs/rate-limits/)
+Only use `production` if DNS is setup and propagated for the specified domain name. In this case, an actual Let's Encrypt certificate will be registered and in case of failure you may hit rate limit for your domain! For more information, please see [Let's Encrypt Rate Limit](https://letsencrypt.org/docs/rate-limits/)
 
 * [Demo of test instance running with `production` argument](https://foolcontrol.org/wp-content/uploads/2018/03/stage-live-test3.png)
  
 ## HowTo: run containerized-wordpress playbook in non interactive mode (parameters)?
 
-If you want to run this playbook in non interactive mode (which is enabled by default) using parametrers, you can do so by running i.e:
+If you want to run this playbook in non interactive mode (which is enabled by default) using parameters, you can do so by running i.e:
 
 ```
 ansible-playbook containerized-wordpress.yml -i hosts --extra-vars "distribution=1 system_user=ubuntu domain=custom.domain2.com wp_version=5.2.3 wp_db_user: admin wp_db_psw: change-M3 db_root_psw: change-M3 wp_db_name=wpdb wp_db_tb_pre=wp_ wp_db_host=mysql"
