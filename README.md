@@ -1,5 +1,7 @@
 # containerized-wordpress-project
 
+_If you're interested in running WordPress on Kubernetes please refer to my [wp-k8s project](https://github.com/AdnanHodzic/wp-k8s)._
+
 Automagically deploy & run containerized WordPress with Let's Encrypt HTTPS encryption using Ansible + Docker.
 
 This whole process will be completed in <= 5 minutes and doesn't require any Docker or Ansible knowledge!
