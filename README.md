@@ -193,6 +193,10 @@ If you have any issues or questions, please feel free to submit an issue.
 
 Since I'm working on this project in free time, please consider supporting this project by making a donation of any amount!
 
+##### Become Github Sponsor
+
+[Become a sponsor to Adnan Hodzic on Github](https://github.com/sponsors/AdnanHodzic) to acknowledge my efforts and help project's further open source development.
+
 ##### PayPal
 [![paypal](https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7AHCP5PU95S4Y&item_name=Contribution+for+work+on+containerized-wordpress-project&currency_code=EUR&source=url)
 
